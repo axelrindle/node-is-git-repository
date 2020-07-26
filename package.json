@@ -4,6 +4,7 @@
   "description": "Test whether a given directory belongs to a git repository.",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint index.js",
     "test": "nyc --reporter=lcov --reporter=text-summary ava"
   },
   "repository": {
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/axelrindle/node-is-git-repository#readme",
   "devDependencies": {
     "ava": "^3.10.1",
+    "eslint": "^7.5.0",
     "nyc": "^15.1.0"
   }
 }
