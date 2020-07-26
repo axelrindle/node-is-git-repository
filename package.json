@@ -1,0 +1,28 @@
+{
+  "name": "@axelrindle/is-git-repository",
+  "version": "1.0.0",
+  "description": "Test whether a given directory belongs to a git repository.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=lcov --reporter=text-summary ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axelrindle/node-is-git-repository.git"
+  },
+  "keywords": [
+    "git",
+    "is-repository",
+    "is-git-repository"
+  ],
+  "author": "Axel Rindle <mail@axelrindle.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axelrindle/node-is-git-repository/issues"
+  },
+  "homepage": "https://github.com/axelrindle/node-is-git-repository#readme",
+  "devDependencies": {
+    "ava": "^3.10.1",
+    "nyc": "^15.1.0"
+  }
+}
