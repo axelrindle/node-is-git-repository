@@ -1,6 +1,6 @@
 {
   "name": "@axelrindle/is-git-repository",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Test whether a given directory belongs to a git repository.",
   "main": "index.js",
   "types": "index.d.ts",
