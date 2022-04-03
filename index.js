@@ -11,7 +11,7 @@ const getCwd = cwd => cwd || process.cwd();
  * Asynchronously tests whether the given directory is a valid git repository.
  * 
  * @param {string?} cwd The directory to check. Defaults to the current working directory.
- * @returns {Promise<Error?>} A Promise that resolves with `null` if the given directory is a valid git repository,
+ * @returns {Promise<void>} A Promise that resolves with `null` if the given directory is a valid git repository,
  *                            with an error otherwise.
  */
 module.exports = (cwd) => {
@@ -20,7 +20,7 @@ module.exports = (cwd) => {
     return new Promise((resolve, reject) => {
         child_process.exec('git status', { cwd }, err => {
             if (err) reject(err);
-            else resolve(null);
+            else resolve();
         });
     });
 };
