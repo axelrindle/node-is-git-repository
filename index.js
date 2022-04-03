@@ -29,18 +29,10 @@ module.exports = (cwd) => {
  * Synchronous version.
  * 
  * @param {string} cwd The directory to check. Defaults to the current working directory.
- * @returns {Error?} `null` if the given directory is a valid git repository, with an error otherwise.
  */
 module.exports.sync = (cwd) => {
-    cwd = getCwd(cwd);
-
-    try {
-        child_process.execSync('git status', {
-            cwd,
-            stdio: 'ignore'
-        });
-        return null;
-    } catch (error) {
-        return error;
-    }
+    child_process.execSync('git status', {
+        cwd: getCwd(cwd),
+        stdio: 'ignore'
+    });
 };
