@@ -10,7 +10,7 @@ test('current directory should be valid (async)', async t => {
 });
 
 test('current directory should be valid (sync)', t => {
-    t.is(isGitRepository.sync(), null);
+    t.is(isGitRepository.sync(), undefined);
 });
 
 test('temp directory should be invalid (async)', async t => {
@@ -21,6 +21,5 @@ test('temp directory should be invalid (async)', async t => {
 });
 
 test('temp directory should be invalid (sync)', t => {
-    const error = isGitRepository.sync(os.tmpdir());
-    t.not(error, null);
+    t.throws(() => isGitRepository.sync(os.tmpdir()))
 })
