@@ -3,7 +3,10 @@
   "version": "1.0.1",
   "description": "Test whether a given directory belongs to a git repository.",
   "main": "index.js",
-  "files": [],
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts"
+  ],
   "scripts": {
     "lint": "eslint index.js",
     "test": "nyc --reporter=lcov --reporter=text-summary ava"
